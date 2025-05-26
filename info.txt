@@ -1,0 +1,30 @@
+https://retoolapi.dev/hhHhvo/expo
+
+See all available endpoints here (generated with json-server).
+Endpoint URL
+
+HTTP method endpoints
+
+GET
+/hhHhvo/expo
+
+GET filter
+/hhHhvo/expo?nombre=value
+
+GET by id
+/hhHhvo/expo/1
+
+GET paginate
+/hhHhvo/expo?_page=2&_limit=10
+
+POST
+/hhHhvo/expo
+
+PUT
+/hhHhvo/expo/1
+
+PATCH
+/hhHhvo/expo/1
+
+DELETE
+/hhHhvo/expo/1

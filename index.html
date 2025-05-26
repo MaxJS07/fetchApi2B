@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Equipos Expo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><b>Gestión Expo System</b></li>
+            </ul>
+            <ul>
+                <li>Integrantes</li>
+                <li>Tareas</li>
+                <li>Mi perfil</li>
+                <li role="button" style="font-size: 16px;">Cerrar sesión</li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Integrantes del equipo</h2>
+
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Correo</th>
+                    <th>Acciones</th> <!--Para botones adicionales-->
+                </tr>
+            </thead>
+            <tbody>
+                <!--Cuerpo de la tabla, aqui van los registros de la base que vienen a través de la API-->
+
+            </tbody>
+        </table>
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
