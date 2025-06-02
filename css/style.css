@@ -6,3 +6,37 @@ li{
     font-size: 16px;
 }
 
+.addBtn{
+background-color: rgb(48, 170, 58);
+position: fixed; /*El botón queda flotando*/
+
+bottom: 30px;
+
+
+right : 35px;
+
+border: none; 
+
+border-radius: 50%;
+
+width: 70px;
+
+height: 70px;
+
+display: flex;
+
+justify-content:center; /*Alineación horizontal*/
+
+align-items: center; /*Alineación vertical*/
+
+box-shadow: 0 4px 10px rgba(129, 128, 128, 0.5); /*Sombras*/
+
+z-index: 1001; /*Para que el botón siempre quede encima de todo*/
+
+transition: transform 0.4s;
+
+}
+
+.addBtn:hover{
+    transform: scale(1.2);
+}
