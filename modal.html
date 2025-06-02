@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <dialog id="modalAgregar" open> <!--Un modal siempre esta cerrado por defecto, por eso para que esté abierto se le pone open-->
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrarModal"></a>
+                <h3>Agregar integrante</h3>
+            </header>
+
+            <form id="frmAgregarIntegrante">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+
+                <input type="text" id="apellido" placeholder="Apellido" required>
+
+                <input type="number" id="edad" placeholder="Edad" required>
+
+                <input type="email" placeholder="Correo electrónico" id="email" required>
+
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

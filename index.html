@@ -44,11 +44,34 @@
             </tbody>
         </table>
     </main>
+    
+    <!--Modal para agregar registros-->
+
+    <dialog id="modalAgregar"> <!--Un modal siempre esta cerrado por defecto, por eso para que esté abierto se le pone open-->
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrarModal"></a>
+                <h3>Agregar integrante</h3>
+            </header>
+
+            <form id="frmAgregarIntegrante">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+
+                <input type="text" id="apellido" placeholder="Apellido" required>
+
+                <input type="number" id="edad" placeholder="Edad" required>
+
+                <input type="email" placeholder="Correo electrónico" id="email" required>
+
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
 
     <!--Botón flotante para agregar un registro-->
     <button class="addBtn" id="btnAbrirModal">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-        
+
     </button>
 
 

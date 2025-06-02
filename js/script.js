@@ -43,3 +43,65 @@ function CrearTabla(datos){ //"Datos" representa al JSON que viene de la API
 }
 
 ObtenerPersonas();
+
+
+
+
+
+
+
+//PROCESOS PARA AGREGAR UN NUEVO REGISTRO
+const modal = document.getElementById("modalAgregar"); // Cuadro de diálogo
+const btnAdd = document.getElementById("btnAbrirModal"); //Boton para abrir
+const btnClose = document.getElementById("btnCerrarModal"); //Boton para cerrar el modal
+
+btnAdd.addEventListener("click", () => {
+    modal.showModal();
+});
+
+btnClose.addEventListener("click", () =>{
+    modal.close()
+});
+
+//Agregar un nuevo integrante desde el form
+document.getElementById("frmAgregarIntegrante").addEventListener("submit", async e => {
+    e.preventDefault(); //La "e" representa al evento "submit" del formulario - El preventDefault evita que el formulario se envíe
+
+    //Capturamos los valores del formulario
+    const nombre = document.getElementById("nombre").value.trim();
+    const apellido = document.getElementById("apellido").value.trim();
+    const edad = document.getElementById("edad").value.trim();
+    const correo = document.getElementById("email").value.trim();
+
+    //Validación básica de campos vacíos
+
+    if(!nombre || !apellido || !edad || !correo){
+        alert("Complete todos los campos.")
+        return;
+    };
+    
+    //Si la validación es correcta, pasamos a llamar a la API
+    const respuesta = await fetch(API_URL, {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({nombre, apellido, edad, correo})
+    });
+
+    if(respuesta.ok){
+        alert("El registro fue agregado de manera correcta.");
+
+        //Entonces limpiamos el form
+        document.getElementById("frmAgregarIntegrante").reset();
+
+        //Cerramos el formulario automáticamente
+        modal.close();
+
+        //Recargamos la tabla volviendo a hacer el get ya hecho anteriormente
+        ObtenerPersonas();
+
+    }
+    else{
+        alert("Ocurrió un error al agregar el nuevo integrante");
+    }
+
+}); //Fin del formulario
