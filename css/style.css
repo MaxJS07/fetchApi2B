@@ -40,3 +40,7 @@ transition: transform 0.4s;
 .addBtn:hover{
     transform: scale(1.2);
 }
+
+.tablaScroll{
+    overflow-x: auto;
+}
