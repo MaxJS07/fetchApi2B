@@ -72,6 +72,34 @@
         </article>
     </dialog>
 
+    <!--Modal para actualizar-->
+
+    <dialog id="modalEditar"> <!--Un modal siempre esta cerrado por defecto, por eso para que esté abierto se le pone open-->
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrarEditar"></a>
+                <h3>Editar información de integrante</h3>
+            </header>
+
+            <form id="frmEditarIntegrante">
+
+                <input type="hidden" id="idEditar"> <!--Un campo de texto escondido para mantener el id de el usuario que se quiere editar.-->
+
+                <input type="text" id="nombreEd" placeholder="Nombre" required>
+
+                <input type="text" id="apellidoEd" placeholder="Apellido" required>
+
+                <input type="number" id="edadEd" placeholder="Edad" required>
+
+                <input type="email" placeholder="Correo electrónico" id="emailEd" required>
+
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
+
+
+
     <!--Botón flotante para agregar un registro-->
     <button class="addBtn" id="btnAbrirModal">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
